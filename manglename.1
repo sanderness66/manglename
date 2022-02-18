@@ -1,0 +1,58 @@
+.TH manglename 1 15-JUL-2021 GO
+
+.SH NAME
+manglename \- mangle file names
+
+.SH SYNOPSIS
+.B manglename
+[\-u \-l \-c ] [\-L lang \-v \-e \-h] name ...
+
+.SH DESCRIPTION
+.B manglename
+changes the capitalisation of file names passed on the command line
+according to the option given:
+
+.TP
+.B \-u
+make file names uppercase
+.TP
+.B \-l
+make file names lowercase
+.TP
+.B \-c
+capitalise file names
+
+.P
+Exactly one of these three options must be given. In addition:
+
+.TP
+.B \-e
+mangle the file extension as well
+.TP
+.B \-L lang
+use capitalisation rules for language "lang" (defaults to English)
+.TP
+.B \-v
+be verbose about what is happening
+.TP
+.B \-h
+print some help
+
+.SH NOTES
+If
+.B manglename
+is invoked as
+.B capitalise,
+it will act as if
+.B manglename \-c
+had been called. This is for backwards compatibility with an earlier
+command by that name.
+
+.SH SEE ALSO
+.BR capit (1)
+
+.SH BUGS
+None.
+
+.SH OWNER
+svm
